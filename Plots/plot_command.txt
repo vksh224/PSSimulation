@@ -1,0 +1,683 @@
+#============= Freq vs Participation ==========================
+reset
+set terminal postscript eps enhanced color
+set style line 1 lc rgb "blue" lt 4 lw 2 ps 2
+set ylabel 'Frequency'
+set xlabel 'No. of Reports'
+set ytics font "Times-Roman,30" 
+set xtics font "Times-Roman,25"
+set xlabel font "Times-Roman,35"
+set ylabel font "Times-Roman,40" 
+set key font " Times-Roman,35"
+set style data histogram
+set style fill solid
+set boxwidth 0.7
+set key off
+set ylabel offset -3,0
+set xlabel offset 0,-2
+set xtics offset -1.2,-1.2 rotate by 45
+set lmargin at screen 0.17
+set bmargin 6
+set output 'freq_vs_participation.eps'
+plot '/Users/vijay/Documents/Waze_Files/freq_vs_participation.txt' using 2:xtic(1) with boxes ls 1
+
+#replot
+
+#=================== Rank Vs Participation =====================
+reset
+set terminal postscript eps enhanced color
+set style line 1 lc rgb "blue" lt 4 lw 2 ps 2
+set style line 2 lc rgb "red" lt 7 lw 2 ps 2
+set ylabel 'Incentive/Rating'
+set xlabel 'Degree of Participation'
+set xtics font "Times-Roman,25" 
+set ytics font "Times-Roman,35" 
+set xlabel font "Times-Roman,35"
+set ylabel font "Times-Roman,40" 
+set key font " Times-Roman,35"
+#set xtics rotate by 45 offset -10,-7.1
+#set bmargin 10
+#set xlabel offset 0, -6.5
+#set ylabel offset -1.5
+set xtics rotate by 45 offset -4,-3.5
+set bmargin 10
+set xlabel offset 0,-4
+set ylabel offset -2,0
+set lmargin at screen 0.12
+set key center right
+set output "rank_participation.eps"
+plot '/Users/vijay/Documents/Waze_Files/score_participation.txt' u 2:xtic(3) w lp ls 1 t'Incentives', '/Users/vijay/Documents/Waze_Files/score_participation.txt' u 1:xtic(3) w lp ls 2 t'Ratings'
+
+#replot
+
+#============= Epinions ==================================
+reset
+set terminal postscript eps enhanced color
+set style line 1 lc rgb "blue" lt 4 lw 2 ps 2
+set style line 2 lc rgb "red" lt 7 lw 2 ps 2
+set ylabel '# Unique Reviews or Feedbacks'
+set xlabel 'Object ID'
+set yrange[0:16000]
+set xtics 1,2,30
+set xtics font "Times-Roman,25" 
+set ytics font "Times-Roman,30" 
+set xlabel font "Times-Roman,35"
+set ylabel font "Times-Roman,30" 
+set key font " Times-Roman,35"
+set bmargin 6
+set xtics offset 0,-1.5 rotate by 45
+set xlabel offset 0, -2
+set ylabel offset -4
+set lmargin at screen 0.17
+
+set output 'Epinions-Review_vs_Feedbacks.eps'
+plot '/Users/vijay/Documents/Waze_Files/epinion.txt' u 2:xtic(1) w lp ls 1 t'Reviews #', '/Users/vijay/Documents/Waze_Files/epinion.txt' u 3:xtic(1) w lp ls 2 t'Feebacks #'
+
+
+#replot
+
+
+
+#Population: 2400
+
+reset
+set terminal postscript eps enhanced color 
+set datafile separator ","
+set style line 1 lc rgb "blue" lt 7 lw 2 ps 2
+set style line 2 lc rgb "black" lt 7 lw 2 ps 2
+set style line 3 lc rgb "green" lt 4 lw 2 ps 2
+set style line 4 lc rgb "red" lt 4 lw 2 ps 2
+set style line 5 lc rgb "blue" lt 8 lw 2 ps 2
+set style line 6 lc rgb "red" lt 8 lw 2 ps 2
+set xlabel '# of Ratings'
+set ylabel 'QoI' 
+#set yrange[0:0.85]
+set xrange [0:120]
+set ytics font "Times-Roman,35" 
+set xtics font "Times-Roman,35"
+set xlabel font "Times-Roman,40"
+set ylabel font "Times-Roman,40" 
+set key font "Times-Roman, 35"
+#set key samplen 6
+set key top right
+
+set bmargin 8
+#set ytics offset 1,0
+set xlabel offset 0,-3
+set ylabel offset -5 ,0
+set lmargin at screen 0.18
+set xtics offset -1.2,-0.5
+#set xrange[0:120]
+
+set output '2400/qoi_comparison_false_event_2400.eps'
+plot '/Users/vijay/Desktop/Trust_Journal/2400_0.15/QOI_0.25.csv' u 5:2 w p ls 4 t'Josang', '/Users/vijay/Desktop/Trust_Journal/2400_0.15/QOI_0.25.csv' u 5:3 w p ls 5 t'QTF'
+
+#replot
+
+
+reset
+set terminal postscript eps enhanced color 
+set datafile separator ","
+set style line 1 lc rgb "blue" lt 7 lw 2 ps 2
+set style line 2 lc rgb "black" lt 7 lw 2 ps 2
+set style line 3 lc rgb "green" lt 4 lw 2 ps 2
+set style line 4 lc rgb "red" lt 4 lw 2 ps 2
+set style line 5 lc rgb "blue" lt 8 lw 2 ps 2
+set style line 6 lc rgb "red" lt 8 lw 2 ps 2
+set xlabel '# of Ratings'
+set ylabel 'QoI' 
+set ytics font "Times-Roman,35" 
+set xtics font "Times-Roman,35"
+set xlabel font "Times-Roman,40"
+set ylabel font "Times-Roman,40" 
+set key font "Times-Roman, 35"
+#set key at 120, 0.25
+#set key samplen 6
+set key bottom right
+set bmargin 8
+#set ytics offset 1,0
+set xlabel offset 0,-3
+set ylabel offset -5 ,0
+set lmargin at screen 0.17
+set xtics offset -1.2,-0.5
+set xrange[0:120]
+
+set output '2400/qoi_comparison_true_event_2400.eps'
+plot '/Users/vijay/Desktop/Trust_Journal/2400_0.15/QOI_0.7.csv' u 5:2 w p ls 4 t'Josang' , '/Users/vijay/Desktop/Trust_Journal/2400_0.15/QOI_0.7.csv' u 5:3 w p ls 5 t'QTF'
+
+reset
+set terminal postscript eps enhanced color
+set datafile separator ","
+set style line 1 lc rgb "blue" lt 6 lw 2 ps 2
+set style line 2 lc rgb "red" lt 4 lw 2 ps 2
+set style line 3 lc rgb "green" lt 8 lw 2 ps 2
+set xlabel 'User ID'
+set ylabel 'Score' rotate by 90
+set ytics font "Helvetica,35" 
+set xtics font "Helvetica,30"
+set xlabel font "Helvetica,40"
+set ylabel font "Helvetica,40" 
+set key font "Helvetica, 30"
+#for 1200
+#set key at 200,0.98
+#for 2400, 3600
+set key right bottom
+set lmargin at screen 0.17
+set bmargin 8
+set xlabel offset 0,-3
+set ylabel offset -5,2
+set xtics offset -1.5,-0.5
+
+set output '2400/our_score_comparison_2400.eps'
+plot '/Users/vijay/Desktop/Trust_Journal/2400_0.15/Our_Score_malicious.csv' u 3:4 w p ls 1 t'Malicious Users', '/Users/vijay/Desktop/Trust_Journal/2400_0.15/Our_Score_selfish.csv' u 3:4 w p ls 2 t'Selfish Users', '/Users/vijay/Desktop/Trust_Journal/2400_0.15/Our_Score_honest.csv' u 3:4 w p ls 3 t'Honest Users'
+
+reset
+set terminal postscript eps enhanced color
+set datafile separator ","
+set style line 1 lc rgb "blue" lt 6 lw 2 ps 2
+set style line 2 lc rgb "red" lt 4 lw 2 ps 2
+set style line 3 lc rgb "green" lt 8 lw 2 ps 2
+set xlabel 'User ID'
+set ylabel 'Score' rotate by 90
+set ytics font "Helvetica,35" 
+set xtics font "Helvetica,35"
+set xlabel font "Helvetica,40"
+set ylabel font "Helvetica,40" 
+set key font "Helvetica, 30"
+#for 2400, 3600
+set key right bottom
+set lmargin at screen 0.17
+set bmargin 8
+set xlabel offset 0,-3
+set ylabel offset -5,2
+set xtics offset -1,-0.5
+
+set output '2400/DS_score_comparison_2400.eps'
+plot '/Users/vijay/Desktop/Trust_Journal/2400_0.15/DS_Score_malicious.csv' u 3:4 w p ls 1 t'Malicious Users', '/Users/vijay/Desktop/Trust_Journal/2400_0.15/DS_Score_selfish.csv' u 3:4 w p ls 2 t'Selfish Users', '/Users/vijay/Desktop/Trust_Journal/2400_0.15/DS_Score_honest.csv' u 3:4 w p ls 3 t'Honest Users'
+
+
+reset
+set terminal postscript eps enhanced color
+set datafile separator ","
+set style line 1 lc rgb "blue" lt 5 lw 2 ps 2
+set style line 2 lc rgb "red" lt 7 lw 2 ps 2
+set style line 3 lc rgb "green" lt 9 lw 2 ps 2
+set ylabel 'Quantity (Total Events)' rotate parallel
+set xlabel 'Quality (True Events)' rotate parallel
+set zlabel 'Score' rotate by 90
+set ytics font "Times-Roman,28" 
+set xtics font "Times-Roman,28"
+set ztics font "Times-Roman,28"
+set xlabel font "Times-Roman,30"
+set ylabel font "Times-Roman,30" 
+set zlabel font "Times-Roman,35" 
+set key font " Times-Roman,30"
+set zlabel offset -3
+set ylabel offset 0,-3
+set xlabel offset 0,-2.5
+set ytics offset 2,-2
+ set xtics offset 2,-2 
+set ticslevel 0
+set view 60,240
+set key spacing 3
+#set dgrid3d 20,20
+set grid ztics
+set grid xtics
+set grid ytics
+set border 1+2+4+8+16+32+64+256+512
+
+set output '2400/Our_Score_2400.eps'
+splot '/Users/vijay/Desktop/Trust_Journal/2400_0.15/Our_Score_Honest.csv' u 6: 5:4 t'Honest' w points ls 1 palette, '/Users/vijay/Desktop/Trust_Journal/2400_0.15/Our_Score_Selfish.csv' u 6: 5:4 t'Selfish' w points ls 2 palette, '/Users/vijay/Desktop/Trust_Journal/2400_0.15/Our_Score_Malicious.csv' u 6: 5:4 t'Malicious' w points ls 3 palette  
+#replot
+
+
+
+########################################################Population: 3600
+
+reset
+set terminal postscript eps enhanced color 
+set datafile separator ","
+set style line 1 lc rgb "blue" lt 7 lw 2 ps 2
+set style line 2 lc rgb "black" lt 7 lw 2 ps 2
+set style line 3 lc rgb "green" lt 4 lw 2 ps 2
+set style line 4 lc rgb "red" lt 4 lw 2 ps 2
+set style line 5 lc rgb "blue" lt 8 lw 2 ps 2
+set style line 6 lc rgb "red" lt 8 lw 2 ps 2
+set xlabel '# of Ratings'
+set ylabel 'QoI' 
+#set yrange[0:0.85]
+set ytics font "Times-Roman,35" 
+set xtics font "Times-Roman,35"
+set xlabel font "Times-Roman,40"
+set ylabel font "Times-Roman,40" 
+set key font "Times-Roman, 35"
+#set key samplen 6
+set key top right
+
+set bmargin 8
+#set ytics offset 1,0
+set xlabel offset 0,-3
+set ylabel offset -5 ,0
+set lmargin at screen 0.18
+set xtics offset -1.2,-0.5
+set xrange[0:120]
+
+set output '3600/qoi_comparison_false_event_3600.eps'
+plot '/Users/vijay/Desktop/Trust_Journal/3600_0.1/QOI_0.17.csv' u 5:2 w p ls 4 t'Josang', '/Users/vijay/Desktop/Trust_Journal/3600_0.1/QOI_0.17.csv' u 5:3 w p ls 5 t'QTF'
+
+#replot
+
+
+reset
+set terminal postscript eps enhanced color 
+set datafile separator ","
+set style line 1 lc rgb "blue" lt 7 lw 2 ps 2
+set style line 2 lc rgb "black" lt 7 lw 2 ps 2
+set style line 3 lc rgb "green" lt 4 lw 2 ps 2
+set style line 4 lc rgb "red" lt 4 lw 2 ps 2
+set style line 5 lc rgb "blue" lt 8 lw 2 ps 2
+set style line 6 lc rgb "red" lt 8 lw 2 ps 2
+set xlabel '# of Ratings'
+set ylabel 'QoI' 
+set ytics font "Times-Roman,35" 
+set xtics font "Times-Roman,35"
+set xlabel font "Times-Roman,40"
+set ylabel font "Times-Roman,40" 
+set key font "Times-Roman, 35"
+set key bottom right
+set bmargin 8
+set xlabel offset 0,-3
+set ylabel offset -5 ,0
+set lmargin at screen 0.17
+set xtics offset -1.2,-0.5
+set xrange[0:120]
+
+set output '3600/qoi_comparison_true_event_3600.eps'
+plot '/Users/vijay/Desktop/Trust_Journal/3600_0.1/QOI_0.78.csv' u 5:2 w p ls 4 t'Josang' , '/Users/vijay/Desktop/Trust_Journal/3600_0.1/QOI_0.78.csv' u 5:3 w p ls 5 t'QTF'
+
+reset
+set terminal postscript eps enhanced color
+set datafile separator ","
+set style line 1 lc rgb "blue" lt 6 lw 2 ps 2
+set style line 2 lc rgb "red" lt 4 lw 2 ps 2
+set style line 3 lc rgb "green" lt 8 lw 2 ps 2
+set xlabel 'User ID'
+set ylabel 'Score' rotate by 90
+set ytics font "Times-Roman,35" 
+set xtics font "Times-Roman,30"
+set xlabel font "Times-Roman,40"
+set ylabel font "Times-Roman,40" 
+set key font "Times-Roman, 30"
+set key right bottom
+set lmargin at screen 0.17
+set bmargin 8
+set xlabel offset 0,-3
+set ylabel offset -5,2
+set xtics offset -1.5,-0.5
+
+
+set output '3600/our_score_comparison_3600.eps'
+plot '/Users/vijay/Desktop/Trust_Journal/3600_0.1/Our_Score_malicious.csv' u 3:4 w p ls 1 t'Malicious Users', '/Users/vijay/Desktop/Trust_Journal/3600_0.1/Our_Score_selfish.csv' u 3:4 w p ls 2 t'Selfish Users', '/Users/vijay/Desktop/Trust_Journal/3600_0.1/Our_Score_honest.csv' u 3:4 w p ls 3 t'Honest Users'
+
+
+###################################################Population: 1200
+
+reset
+set terminal postscript eps enhanced color 
+set datafile separator ","
+set style line 1 lc rgb "blue" lt 7 lw 2 ps 2
+set style line 2 lc rgb "black" lt 7 lw 2 ps 2
+set style line 3 lc rgb "green" lt 4 lw 2 ps 2
+set style line 4 lc rgb "red" lt 4 lw 2 ps 2
+set style line 5 lc rgb "blue" lt 8 lw 2 ps 2
+set style line 6 lc rgb "red" lt 8 lw 2 ps 2
+set xlabel '# of Ratings'
+set ylabel 'QoI' 
+#set yrange[0:0.85]
+set ytics font "Times-Roman,35" 
+set xtics font "Times-Roman,35"
+set xlabel font "Times-Roman,40"
+set ylabel font "Times-Roman,40" 
+set key font "Times-Roman, 35"
+
+set key bottom right
+
+set bmargin 8
+#set ytics offset 1,0
+set xlabel offset 0,-3
+set ylabel offset -5 ,0
+set lmargin at screen 0.18
+set xtics offset -1.2,-0.5
+set xrange[0:120]
+
+set output '1200/qoi_comparison_false_event_1200.eps'
+plot '/Users/vijay/Desktop/Trust_Journal/1200_0.3/QOI_0.45.csv' u 5:2 w p ls 4 t'Josang', '/Users/vijay/Desktop/Trust_Journal/1200_0.3/QOI_0.45.csv' u 5:3 w p ls 5 t'QTF'
+
+#replot
+
+
+reset
+set terminal postscript eps enhanced color 
+set datafile separator ","
+set style line 1 lc rgb "blue" lt 7 lw 2 ps 2
+set style line 2 lc rgb "black" lt 7 lw 2 ps 2
+set style line 3 lc rgb "green" lt 4 lw 2 ps 2
+set style line 4 lc rgb "red" lt 4 lw 2 ps 2
+set style line 5 lc rgb "blue" lt 8 lw 2 ps 2
+set style line 6 lc rgb "red" lt 8 lw 2 ps 2
+set xlabel '# of Ratings'
+set ylabel 'QoI' 
+set ytics font "Times-Roman,35" 
+set xtics font "Times-Roman,35"
+set xlabel font "Times-Roman,40"
+set ylabel font "Times-Roman,40" 
+set key font "Times-Roman, 35"
+#set key at 120, 0.25
+#set key samplen 6
+set key bottom right
+
+set bmargin 8
+#set ytics offset 1,0
+set xlabel offset 0,-3
+set ylabel offset -5 ,0
+set lmargin at screen 0.17
+set xtics offset -1.2,-0.5
+set xrange[0:120]
+
+set output '1200/qoi_comparison_true_event_1200.eps'
+plot '/Users/vijay/Desktop/Trust_Journal/1200_0.3/QOI_0.5.csv' u 5:2 w p ls 4 t'Josang' , '/Users/vijay/Desktop/Trust_Journal/1200_0.3/QOI_0.5.csv' u 5:3 w p ls 5 t'QTF'
+
+reset
+set terminal postscript eps enhanced color
+set datafile separator ","
+set style line 1 lc rgb "blue" lt 6 lw 2 ps 2
+set style line 2 lc rgb "red" lt 4 lw 2 ps 2
+set style line 3 lc rgb "green" lt 8 lw 2 ps 2
+set xlabel 'User ID'
+set ylabel 'Score' rotate by 90
+set ytics font "Times-Roman,35" 
+set xtics font "Times-Roman,30"
+set xlabel font "Times-Roman,40"
+set ylabel font "Times-Roman,40" 
+set key font "Times-Roman, 30"
+#for 1200
+#set key at 200,0.98
+#for 2400, 3600
+set key right bottom
+set lmargin at screen 0.17
+set bmargin 8
+set xlabel offset 0,-3
+set ylabel offset -5,2
+set xtics offset -1.5,-0.5
+
+set output '1200/our_score_comparison_1200.eps'
+plot '/Users/vijay/Desktop/Trust_Journal/1200_0.3/Our_Score_malicious.csv' u 3:4 w p ls 1 t'Malicious Users', '/Users/vijay/Desktop/Trust_Journal/1200_0.3/Our_Score_selfish.csv' u 3:4 w p ls 2 t'Selfish Users', '/Users/vijay/Desktop/Trust_Journal/1200_0.3/Our_Score_honest.csv' u 3:4 w p ls 3 t'Honest Users'
+
+
+
+############################################# Incentives
+
+reset
+set terminal postscript eps enhanced color 
+set ylabel 'Incentives per user' rotate by 90
+set ytics font "Times-Roman,35" 
+set xtics font "Times-Roman,35"
+set xlabel font "Times-Roman,35"
+set ylabel font "Times-Roman,35" 
+set key font "Times-Roman, 30"
+set key at 0.5, 23
+set xlabel offset 0,-1
+set ylabel offset -3,0
+set bmargin 5
+set lmargin at screen 0.15
+set style data histogram
+set style histogram cluster gap 1
+set style fill solid border -1
+set boxwidth 0.9
+set xtic scale 0
+set output 'Our_Incentive_selfish.eps'
+
+# 2, 3, 4, 5 are the indexes of the columns; 'fc' stands for 'fillcolor'
+plot '/Users/vijay/Desktop/Mobihoc_Plots/QnQ/selfish.txt' using 2:xtic(1) ti col fc rgb "black" fillstyle pattern 3, '' u 3 ti col fc rgb "blue" fillstyle pattern 2, '' u 4 ti col fc rgb "red" fillstyle pattern 5, '' u 5 ti col fc rgb "green" fillstyle pattern 4
+
+
+reset
+set terminal postscript eps enhanced color 
+set ylabel 'Incentives per user' rotate by 90
+set ytics font "Times-Roman,35" 
+set xtics font "Times-Roman,35"
+set xlabel font "Times-Roman,35"
+set ylabel font "Times-Roman,35" 
+set key font "Times-Roman, 30"
+set key at 0.5, 23
+set xlabel offset 0,-1
+set ylabel offset -3,0
+set bmargin 5
+set lmargin at screen 0.15
+set style data histogram
+set style histogram cluster gap 1
+set style fill solid border -1
+set boxwidth 0.9
+set xtic scale 0
+set output 'Our_Incentive_honest.eps'
+
+# 2, 3, 4, 5 are the indexes of the columns; 'fc' stands for 'fillcolor'
+plot '/Users/vijay/Desktop/Mobihoc_Plots/QnQ/honest.txt' using 2:xtic(1) ti col fc rgb "black" fillstyle pattern 3, '' u 3 ti col fc rgb "blue" fillstyle pattern 2, '' u 4 ti col fc rgb "red" fillstyle pattern 5, '' u 5 ti col fc rgb "green" fillstyle pattern 4
+
+
+
+######################## Parameters ###########################
+reset
+set terminal postscript eps enhanced color 
+set datafile separator ","
+set style line 1 lc rgb "red" lt 4 lw 2 ps 1
+set style line 2 lc rgb "green" lt 8 lw 2 ps 1
+set style line 3 lc rgb "black" lt 6 lw 2 ps 1
+set style line 4 lc rgb "red" lt 4 lw 2 ps 2
+set style line 5 lc rgb "green" lt 8 lw 2 ps 2
+set style line 6 lc rgb "black" lt 6 lw 2 ps 2
+
+set ylabel 'w_b'
+set xlabel '# of Ratings'
+set ytics 0,0.1,1
+set xrange [0:150]
+set ytics font "Times-Roman,30" 
+set xtics font "Times-Roman,30"
+set xlabel font "Times-Roman,40"
+set ylabel font "Times-Roman,40" 
+set key font "Times-Roman, 35"
+set bmargin 8
+set xlabel offset 0,-3
+set ylabel offset -4 ,0 
+set lmargin at screen 0.17
+set key spacing 1
+set key center right
+set xtics offset 0, -0.5
+
+set output 'parameters/belief_Ab.eps'
+
+plot 1/0 w lp ls 4 t'A_b = 5', '/Users/vijay/Documents/Waze_Plots/parameters/belief_a_5.csv' using 1:2 w lp ls 1 notitle, 1/0 w lp ls 5 t'A_b = 20', '/Users/vijay/Documents/Waze_Plots/parameters/belief_a_20.csv' using 1:2 w lp ls 2 notitle, 1/0 w lp ls 6 t'A_b = 100','/Users/vijay/Documents/Waze_Plots/parameters/belief_a_100.csv' using 1:2 w lp ls 3 notitle
+
+
+reset
+set terminal postscript eps enhanced color 
+set datafile separator ","
+set style line 1 lc rgb "red" lt 4 lw 2 ps 1
+set style line 2 lc rgb "green" lt 8 lw 2 ps 1
+set style line 3 lc rgb "black" lt 6 lw 2 ps 1
+set style line 4 lc rgb "red" lt 4 lw 2 ps 2
+set style line 5 lc rgb "green" lt 8 lw 2 ps 2
+set style line 6 lc rgb "black" lt 6 lw 2 ps 2
+set ylabel 'w_b'
+set xlabel '# of Ratings'
+#set ytics 0,0.1,1
+set xrange [0:150]
+set ytics font "Times-Roman,30" 
+set xtics font "Times-Roman,30"
+set xlabel font "Times-Roman,40"
+set ylabel font "Times-Roman,40" 
+set key font "Times-Roman, 35"
+set bmargin 8
+set xlabel offset 0,-3
+set ylabel offset -4 ,0 
+set lmargin at screen 0.17
+set key spacing 1
+set key bottom right
+set xtics offset 0, -0.5
+
+set output 'parameters/belief_b.eps'
+
+plot 1/0 w lp ls 4 t'B_b = 0.04', '/Users/vijay/Documents/Waze_Plots/parameters/belief_b_0.04.csv' u 1:2 w lp ls 1 notitle, 1/0 w lp ls 5 t'B_b = 0.08', '/Users/vijay/Documents/Waze_Plots/parameters/belief_b_0.08.csv' u 1:2 w lp ls 2 notitle, 1/0 w lp ls 6 t'B_b = 0.24', '/Users/vijay/Documents/Waze_Plots/parameters/belief_b_0.24.csv' u 1:2 w lp ls 3 notitle
+
+
+reset
+set terminal postscript eps enhanced color 
+#set datafile separator ","
+set style line 2 lc rgb "red" lt 4 lw 2 ps 2
+set style line 3 lc rgb "green" lt 8 lw 2 ps 2
+set style line 4 lc rgb "green" lt 2 lw 2 ps 2
+set style line 5 lc rgb "black" lt 5 lw 2 ps 2
+set style line 6 lc rgb "blue" lt 6 lw 2 ps 2
+
+set ylabel 'w_b'
+set xlabel '# of Ratings'
+#set ytics 0,0.1,1
+set xrange[0:200]
+set ytics font "Times-Roman,30" 
+set xtics font "Times-Roman,30"
+set xlabel font "Times-Roman,35"
+set ylabel font "Times-Roman,40" 
+set key font "Times-Roman, 30"
+set bmargin 8
+set key bottom right
+set xtics offset 0, -0.5
+set xlabel offset 0,-3
+set ylabel offset -4 ,0 
+set lmargin at screen 0.17
+
+set output "parameters/belief_inverseV.eps"
+plot '/Users/vijay/Documents/Waze_Plots/parameters/inverseV_2_0.02.txt' u 1:2 w lp ls 2 t'V = 0.5', '/Users/vijay/Documents/Waze_Plots/parameters/inverseV_4_0.08.txt' u 1:2 w lp ls 4 t'V = 0.25', '/Users/vijay/Documents/Waze_Plots/parameters/inverseV_16_0.08.txt' u 1:2 w lp ls 5 t'V = 0.0625'
+
+
+reset
+set terminal postscript eps enhanced color 
+set datafile separator ","
+
+set style line 1 lc rgb "red" lt 4 lw 2 ps 1
+set style line 2 lc rgb "green" lt 8 lw 2 ps 1
+set style line 3 lc rgb "black" lt 6 lw 2 ps 1
+set style line 4 lc rgb "red" lt 4 lw 2 ps 2
+set style line 5 lc rgb "green" lt 8 lw 2 ps 2
+set style line 6 lc rgb "black" lt 6 lw 2 ps 2
+set ylabel 'w_{u}'
+set xlabel '# of Ratings'
+#set ytics 0,0.1,1
+#set yrange[0:0.40]
+set xrange[0:120]
+set ytics font "Times-Roman,35" 
+set xtics font "Times-Roman,35"
+set xlabel font "Times-Roman,40"
+set ylabel font "Times-Roman,35" 
+set key font "Times-Roman, 35"
+set bmargin 8
+set xtics offset -1, -1
+set xlabel offset 0,-3
+set ylabel offset -4 ,0 
+set lmargin at screen 0.17
+set key spacing 1
+set key top right
+
+set output 'parameters/uncertainty_phi.eps'
+plot 1/0 w lp ls 4 t'{/Symbol f} = 0.2', '/Users/vijay/Documents/Waze_Plots/parameters/Our_QOI_phi_0.2.csv' u 1:2 w lp ls 1 notitle, 1/0 w lp ls 5 t'{/Symbol f} = 0.4', '/Users/vijay/Documents/Waze_Plots/parameters/Our_QOI_phi_0.4.csv' u 1:2 w lp ls 2 notitle, 1/0 w lp ls 6 t'{/Symbol f} = 0.8', '/Users/vijay/Documents/Waze_Plots/parameters/Our_QOI_phi_0.8.csv' u 1:2 w lp ls 3 notitle
+
+
+reset
+set terminal postscript eps enhanced color 
+#set datafile separator ","
+set style line 7 lc rgb "blue" lt 6 lw 1 ps 0.5
+set style line 1 lc rgb "red" lt 4 lw 2 ps 1
+set style line 2 lc rgb "green" lt 8 lw 2 ps 1
+set style line 3 lc rgb "black" lt 6 lw 2 ps 1
+set style line 4 lc rgb "red" lt 4 lw 2 ps 2
+set style line 5 lc rgb "green" lt 8 lw 2 ps 2
+set style line 6 lc rgb "black" lt 6 lw 2 ps 2
+
+set ylabel 'w_{u}'
+set xlabel '# of Ratings'
+set yrange [0:0.6]
+set xrange [0:250]
+set ytics font "Times-Roman,30" 
+set xtics font "Times-Roman,30"
+set xlabel font "Times-Roman,40"
+set ylabel font "Times-Roman,40" 
+set key font "Times-Roman, 30"
+set key center right
+set bmargin 8
+set xtics offset -1, -0.5
+set xlabel offset 0,-3
+set ylabel offset -4 ,0 
+set lmargin at screen 0.17
+set label "w_{u}^{max}" at 150, 0.52 font "Times-Roman,35"
+y = 0.5
+
+set output "parameters/uncertainty_thresholdN.eps"
+
+plot 1/0 w lp ls 4 t'N_{thres} = 25', '/Users/vijay/Documents/Waze_Plots/parameters/threshold_25.txt' u 1:2 w lp ls 1 notitle, 1/0 w lp ls 5 t'N_{thres} = 50', '/Users/vijay/Documents/Waze_Plots/parameters/threshold_50.txt' u 1:2 w lp ls 2 notitle, 1/0 w lp ls 6 t'N_{thres} = 100', '/Users/vijay/Documents/Waze_Plots/parameters/threshold_100.txt' u 1:2 w lp ls 3 notitle , y w lp ls 7 notitle
+
+
+reset
+set terminal postscript eps enhanced color
+set style line 1 lc rgb "black" lt 4 lw 2 ps 1
+set style line 2 lc rgb "red" lt 7 lw 2 ps 1
+set ylabel 'w_{b}' rotate by 90
+set xlabel 'N'
+set xtics font "Times-Roman,35" 
+set ytics font "Times-Roman,30" 
+set xlabel font "Times-Roman,35"
+set ylabel font "Times-Roman,40" 
+set key font"Times-Roman ,35"
+#set key center
+set key off
+set yrange [0:1.1]
+set xrange[0:160]
+set ylabel offset -4,0
+set xlabel offset 0,-2
+set xtics offset -1, -0.5
+set bmargin 6
+set lmargin at screen 0.16
+set label "Lag phase" at 10, 0.1 font "Times-Roman,25"
+set label "Exponential phase" at 80, 0.5  font "Times-Roman,25"
+set label "Stationary phase" at 100, 1.05  font "Times-Roman,25"
+
+set output "parameters/logistic_60_new.eps"
+plot '/Users/vijay/Documents/Waze_Plots/parameters/logistic_60.txt' u 1:2 w lp ls 1
+
+reset
+set terminal postscript eps enhanced color
+set style line 1 lc rgb "black" lt 4 lw 2 ps 1
+set style line 2 lc rgb "red" lt 7 lw 2 ps 2
+set ylabel 'w_{u}' rotate by 90
+set xlabel 'N'
+set xtics font "Times-Roman,35" 
+set ytics font "Times-Roman,35" 
+set xlabel font "Times-Roman,35"
+set ylabel font "Times-Roman,40" 
+set key font"Times-Roman,35"
+set key off
+set xrange[0:120]
+set ylabel offset -5.5,0
+set xlabel offset 0,-3
+set xtics offset -1, -0.5
+set bmargin 8
+set lmargin at screen 0.20
+set label "N_{thres}" at 45, 0.03  font "Times-Roman,25"
+set arrow from 50, 0 to 50, 0.5 nohead ls 2
+
+set output "parameters/kohlrausch_thres_new.eps"
+plot '/Users/vijay/Documents/Waze_Plots/parameters/kohlrausch.txt' u 1:2 w lp ls 1 
+
+
+set output
+
+
+

@@ -1,0 +1,13 @@
+set datafile separator ","
+set style line 1 lc rgb "blue" lt 7 lw 2 ps 2
+set style line 2 lc rgb "black" lt 8 lw 2 ps 2
+set style line 3 lc rgb "green" lt 4 lw 2 ps 2
+set style line 4 lc rgb "red" lt 4 lw 2 ps 2
+set style line 5 lc rgb "blue" lt 8 lw 2 ps 2
+set style line 6 lc rgb "red" lt 8 lw 2 ps 2
+
+set key outside
+
+plot 'userLocation_malicious_0.csv' u 2:3 w p ls 4 t'Malicious','userLocation_honest_0.csv' u 2:3 w p ls 3 t'Honest', 'userLocation_selfish_0.csv' u 2:3 w p ls 2 t'Selfish', 'eventLocation_0.csv' u 2:3 w p ls 5 t'Event'
+
+plot 'userLocation_malicious_1.csv' u 2:3 w p ls 4 t'Malicious','userLocation_honest_1.csv' u 2:3 w p ls 3 t'Honest', 'userLocation_selfish_1.csv' u 2:3 w p ls 2 t'Selfish', 'eventLocation_1.csv' u 2:3 w p ls 5 t'Event'

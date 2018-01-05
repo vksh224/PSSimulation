@@ -1,0 +1,67 @@
+100
+ NEW PT: Precision 0.98 Recall 1 FScore 0.989899
+ NEW EUT: Precision 0.9375 Recall 0.612245 FScore 0.740741
+
+ Rare PT: cntPTPublishedRareTrueEvents 22 cntPTPublishedRareEvents 22 cntPTRareTrueEvents 22
+ NEW Rare PT: Precision 1 Recall 1 FScore 1
+
+ Rare EUT: cntEUTPublishedRareTrueEvents 3 cntEUTPublishedRareEvents 4 cntEUTRareTrueEvents 22
+ NEW Rare EUT: Precision 0.75 Recall 0.136364 FScore 0.230769
+
+
+150		
+
+ NEW PT: Precision 0.979798 Recall 0.979798 FScore 0.979798
+ NEW EUT: Precision 0.955882 Recall 0.656566 FScore 0.778443
+
+ Rare PT: cntPTPublishedRareTrueEvents 35 cntPTPublishedRareEvents 35 cntPTRareTrueEvents 37
+ NEW Rare PT: Precision 1 Recall 0.945946 FScore 0.972222
+
+ Rare EUT: cntEUTPublishedRareTrueEvents 3 cntEUTPublishedRareEvents 4 cntEUTRareTrueEvents 37
+ NEW Rare EUT: Precision 0.75 Recall 0.0810811 FScore 0.146341
+
+
+ 200
+
+ NEW PT: Precision 0.951724 Recall 0.951724 FScore 0.951724
+ NEW EUT: Precision 0.939394 Recall 0.641379 FScore 0.762295
+
+ Rare PT: cntPTPublishedRareTrueEvents 49 cntPTPublishedRareEvents 53 cntPTRareTrueEvents 53
+ NEW Rare PT: Precision 0.924528 Recall 0.924528 FScore 0.924528
+
+ Rare EUT: cntEUTPublishedRareTrueEvents 3 cntEUTPublishedRareEvents 5 cntEUTRareTrueEvents 53
+ NEW Rare EUT: Precision 0.6 Recall 0.0566038 FScore 0.103448
+
+ 250
+
+ NEW PT: Precision 0.915789 Recall 0.95082 FScore 0.932976
+ NEW EUT: Precision 0.914729 Recall 0.644809 FScore 0.75641
+
+ Rare PT: cntPTPublishedRareTrueEvents 61 cntPTPublishedRareEvents 73 cntPTRareTrueEvents 66
+ NEW Rare PT: Precision 0.835616 Recall 0.924242 FScore 0.877698
+
+ Rare EUT: cntEUTPublishedRareTrueEvents 3 cntEUTPublishedRareEvents 8 cntEUTRareTrueEvents 66
+ NEW Rare EUT: Precision 0.375 Recall 0.0454545 FScore 0.0810811
+
+ 300
+
+ NEW PT: Precision 0.904545 Recall 0.929907 FScore 0.917051
+ NEW EUT: Precision 0.905405 Recall 0.626168 FScore 0.740331
+
+ Rare PT: cntPTPublishedRareTrueEvents 71 cntPTPublishedRareEvents 86 cntPTRareTrueEvents 79
+ NEW Rare PT: Precision 0.825581 Recall 0.898734 FScore 0.860606
+
+ Rare EUT: cntEUTPublishedRareTrueEvents 3 cntEUTPublishedRareEvents 9 cntEUTRareTrueEvents 79
+ NEW Rare EUT: Precision 0.333333 Recall 0.0379747 FScore 0.0681818
+
+350
+
+ NEW PT: Precision 0.903766 Recall 0.923077 FScore 0.913319
+ NEW EUT: Precision 0.893082 Recall 0.606838 FScore 0.722646
+
+ Rare PT: cntPTPublishedRareTrueEvents 80 cntPTPublishedRareEvents 97 cntPTRareTrueEvents 91
+ NEW Rare PT: Precision 0.824742 Recall 0.879121 FScore 0.851064
+ 
+ Rare EUT: cntEUTPublishedRareTrueEvents 3 cntEUTPublishedRareEvents 12 cntEUTRareTrueEvents 91
+ NEW Rare EUT: Precision 0.25 Recall 0.032967 FScore 0.0582524
+
