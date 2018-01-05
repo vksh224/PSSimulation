@@ -1,0 +1,264 @@
+set terminal postscript eps enhanced color 
+set datafile separator ","
+set style line 1 lc rgb "blue" lt 7 lw 2 ps 2
+set style line 2 lc rgb "black" lt 7 lw 2 ps 2
+set ytics font "Helvetica,35" 
+set xtics font "Helvetica,35"
+set xlabel font "Helvetica,40"
+set ylabel font "Helvetica,40" 
+set key font "Helvetica, 35"
+set xzeroaxis
+set arrow 1 from 0.25, -2  to 0.25,1 dt 7
+set key bottom right
+set xlabel 'Expected Truthfulness'
+set ylabel 'QoI' rotate by 90
+set bmargin 8
+#set ytics offset 1,0
+set xlabel offset 0,-2
+set ylabel offset -3 ,2
+set lmargin at screen 0.15
+#plot 'QOI_0.7.csv' u 3:4  w p ls 1
+plot '/Users/vijay/Desktop/Mobihoc_Waze_Plots/2400_0.15/Our_QOI0.08.csv' u 3:4 w p ls 1 notitle
+set output 'logit_prospect.eps'
+replot
+
+#plot '/Users/vijay/Desktop/Mobihoc_Waze_Plots/2400_0.15/QOI_0.7.csv' u 3:4 w p ls 1 t'Prospect Theory', '/Users/vijay/Desktop/Waze_Plots/2400_0.15/QOI_0.7.csv' u 3:4 w p ls 2 t'Logit link'
+
+plot '/Users/vijay/Desktop/Mobihoc_Waze_Plots/2400_0.15/Our_QOI0.08.csv' u 3:4 w p ls 1 t'Prospect Theory', '/Users/vijay/Desktop/Waze_Plots/2400_0.15/Our_QOI0.08.csv' u 3:4 w p ls 2 t'Logit link'
+
+set output 'logit_prospect.eps'
+replot
+
+
+--------------------------Plot : QOI Total No Of Ratings vs Total No of Positive Ratings vs QOI---------------------
+
+======== Medium Population - 2400 ====================
+
+True Event ---------
+
+set terminal postscript eps enhanced color 
+set datafile separator ","
+set style line 1 lc rgb "blue" lt 7 lw 2 ps 2
+set style line 2 lc rgb "black" lt 7 lw 2 ps 2
+set style line 3 lc rgb "green" lt 4 lw 2 ps 2
+set style line 4 lc rgb "red" lt 4 lw 2 ps 2
+set style line 5 lc rgb "blue" lt 8 lw 2 ps 2
+set style line 6 lc rgb "red" lt 8 lw 2 ps 2
+set xlabel '# of Ratings'
+set ylabel 'QoI' 
+set ytics font "Times-Roman,35" 
+set xtics font "Times-Roman,35"
+set xlabel font "Times-Roman,40"
+set ylabel font "Times-Roman,40" 
+set key font "Times-Roman, 35"
+set key at 120, 0.25
+#set key samplen 6
+
+set bmargin 8
+#set ytics offset 1,0
+set xlabel offset 0,-3
+set ylabel offset -5 ,0
+set lmargin at screen 0.17
+set xtics offset -1.2,-0.5
+set xrange[0:120]
+
+plot '/Users/vijay/Desktop/Mobihoc_Waze_Plots/2400_0.15/QOI_0.7.csv' u 5:2 w p ls 4 t'Josang' , '/Users/vijay/Desktop/Mobihoc_Waze_Plots/2400_0.15/QOI_0.7.csv' u 5:3 w p ls 5 t'Proposed'
+set output 'qoi_comparison_true_event.eps'
+replot
+
+False Event -----------
+
+set terminal postscript eps enhanced color 
+set datafile separator ","
+set style line 1 lc rgb "blue" lt 7 lw 2 ps 2
+set style line 2 lc rgb "black" lt 7 lw 2 ps 2
+set style line 3 lc rgb "green" lt 4 lw 2 ps 2
+set style line 4 lc rgb "red" lt 4 lw 2 ps 2
+set style line 5 lc rgb "blue" lt 8 lw 2 ps 2
+set style line 6 lc rgb "red" lt 8 lw 2 ps 2
+set xlabel '# of Ratings'
+set ylabel 'QoI' 
+set yrange[0:0.85]
+set ytics font "Times-Roman,35" 
+set xtics font "Times-Roman,35"
+set xlabel font "Times-Roman,40"
+set ylabel font "Times-Roman,40" 
+set key font "Times-Roman, 35"
+#set key samplen 6
+
+set bmargin 8
+#set ytics offset 1,0
+set xlabel offset 0,-3
+set ylabel offset -5 ,0
+set lmargin at screen 0.18
+set xtics offset -1.2,-0.5
+set xrange[0:120]
+
+plot '/Users/vijay/Desktop/Mobihoc_Waze_Plots/2400_0.15/QOI_0.25.csv' u 5:2 w p ls 4 t'Josang', '/Users/vijay/Desktop/Mobihoc_Waze_Plots/2400_0.15/QOI_0.25.csv' u 5:3 w p ls 5 t'Proposed'
+set output 'qoi_comparison_false_event_new.eps'
+replot
+
+
+set key horiz
+set key outside
+set key horizontal center top maxrows 2
+
+========== High population - 3600 ============
+
+set terminal postscript eps enhanced color 
+
+set datafile separator ","
+set style line 1 lc rgb "blue" lt 7 lw 2 ps 2
+set style line 2 lc rgb "black" lt 7 lw 2 ps 2
+set style line 3 lc rgb "green" lt 4 lw 2 ps 2
+set style line 4 lc rgb "red" lt 4 lw 2 ps 2
+set style line 5 lc rgb "blue" lt 8 lw 2 ps 2
+set style line 6 lc rgb "red" lt 8 lw 2 ps 2
+set xlabel '# of Ratings'
+set ylabel 'QoI' 
+set ytics font "Helvetica,35" 
+set xtics font "Helvetica,35"
+set xlabel font "Helvetica,40"
+set ylabel font "Helvetica,40" 
+set key font "Helvetica, 35"
+set bmargin 8
+#set ytics 0,0.1,1
+set xtics offset -1.5,-0.5
+set xlabel offset 0,-3
+set ylabel offset -4 ,0
+set lmargin at screen 0.17
+set key center right
+set xrange[0:200]
+plot 'QOI_0.8.csv' u 5:3 w p ls 4 t'True Event', 'QOI_0.15.csv' u 5:3 w p ls 5 t'False Event'
+set output 'qoi_comparison_200_3600.eps'
+replot
+
+set key horiz
+set key outside
+
+plot 'QOI_0.8.csv' u 5:2 w p ls 1 t'J-QOI(r=0.8, s=0.15, t=0.05)', 'QOI_0.15.csv' u 5:2 w p ls 3 t'J-QOI(r=0.15, s=0.8, t=0.05)' , 'QOI_0.8.csv' u 5:3 w p ls 2 t'P-QOI(r=0.8, s=0.15, t=0.05)', 'QOI_0.15.csv' u 5:3 w p ls 4 t'P-QOI(r=0.15, s=0.8, t=0.05)'
+
+
+========= Low Population - 1200 ====================
+set style line 1 lc rgb "blue" lt 7 lw 2 ps 2
+set style line 2 lc rgb "red" lt 7 lw 2 ps 2
+set style line 3 lc rgb "blue" lt 4 lw 2 ps 2
+set style line 4 lc rgb "red" lt 4 lw 2 ps 2
+set style line 5 lc rgb "blue" lt 8 lw 2 ps 2
+set style line 6 lc rgb "red" lt 8 lw 2 ps 2
+
+set terminal postscript eps enhanced color 
+set datafile separator ","
+set style line 1 lc rgb "blue" lt 7 lw 2 ps 2
+set style line 2 lc rgb "black" lt 7 lw 2 ps 2
+set style line 3 lc rgb "green" lt 4 lw 2 ps 2
+set style line 4 lc rgb "red" lt 4 lw 2 ps 2
+set style line 5 lc rgb "blue" lt 8 lw 2 ps 2
+set style line 6 lc rgb "red" lt 8 lw 2 ps 2
+set xlabel '# of Ratings'
+set ylabel 'QoI' 
+set ytics 0,0.1,0.8
+set ytics font "Helvetica,35" 
+set xtics font "Helvetica,35"
+set xlabel font "Helvetica,40"
+set ylabel font "Helvetica,40" 
+set key font "Helvetica, 35"
+set bmargin 8
+set yrange[0:0.85]
+set xlabel offset 0,-3
+set ylabel offset -4 ,0
+set xtics offset -1.2,-0.5
+set xrange[0:200]
+set lmargin at screen 0.17
+#set key center right
+set key bottom right
+plot 'QOI_0.5.csv' u 5:3 w p ls 4 t'True Event', 'QOI_0.45.csv' u 5:3 w p ls 5 t'False Event'
+set output 'qoi_comparison_200_1200_new.eps'
+replot
+
+plot 'QOI_0.45.csv' u 5:2 w p ls 1 t'J-QOI(r=0.45, s=0.5, t=0.05)', 'QOI_0.5.csv' u 5:2 w p ls 3 t'J-QOI(r=0.5, s=0.45, t=0.05)' , 'QOI_0.45.csv' u 5:3 w p ls 2 t'P-QOI(r=0.45, s=0.5, t=0.05)', 'QOI_0.5.csv' u 5:3 w p ls 4 t'P-QOI(r=0.5, s=0.45, t=0.05)'
+
+=========== Medium Population - 2400 ===================
+
+set terminal postscript eps enhanced color 
+set datafile separator ","
+set style line 1 lc rgb "blue" lt 7 lw 2 ps 2
+set style line 2 lc rgb "red" lt 7 lw 2 ps 2
+set style line 3 lc rgb "black" lt 4 lw 2 ps 2
+set style line 4 lc rgb "yellow" lt 4 lw 2 ps 2
+set style line 5 lc rgb "blue" lt 8 lw 2 ps 2
+set style line 6 lc rgb "red" lt 8 lw 2 ps 2
+set xlabel '# of Ratings'
+set ylabel 'QOI' 
+set ytics font "Times-Roman,20" 
+set xtics font "Times-Roman,20"
+set xlabel font "Times-Roman,20"
+set ylabel font "Times-Roman,20" 
+set key font "Times-Roman, 15"
+set key space 2
+set key horiz
+set key outside
+set key horizontal center top maxrows 2
+plot 'QOI_0.55.csv' u 5:2 w p ls 1 t'J-QOI(r=0.55, s=0.4, t=0.05)', 'QOI_0.4.csv' u 5:2 w p ls 3 t'J-QOI(r=0.4, s=0.55, t=0.05)' , 'QOI_0.55.csv' u 5:3 w p ls 2 t'P-QOI(r=0.55, s=0.4, t=0.05)', 'QOI_0.4.csv' u 5:3 w p ls 4 t'P-QOI(r=0.3, s=0.55, t=0.05)'
+set output 'qoi_comparison.eps'
+replot
+
+
+
+set terminal postscript eps enhanced color 
+set datafile separator ","
+set style line 1 lc rgb "blue" lt 7 lw 2 ps 2
+set style line 2 lc rgb "red" lt 7 lw 2 ps 2
+set style line 3 lc rgb "blue" lt 4 lw 2 ps 2
+set style line 4 lc rgb "red" lt 4 lw 2 ps 2
+set style line 5 lc rgb "blue" lt 8 lw 2 ps 2
+set style line 6 lc rgb "red" lt 8 lw 2 ps 2
+set xlabel '# of Ratings'
+set ylabel 'QoI' 
+set ytics font "Times-Roman,20" 
+set xtics font "Times-Roman,20"
+set xlabel font "Times-Roman,20"
+set ylabel font "Times-Roman,20" 
+set key font "Times-Roman, 15"
+set key space 2
+set key horiz
+set key outside
+set key horizontal center top maxrows 2
+plot 'QOI_0.5.csv' u 5:2 w p ls 1 t'J-QOI(r=0.5, s=0.5, t=0)', 'QOI_0.5.csv' u 5:3 w p ls 2 t'P-QOI(r=0.5, s=0.5, t=0.0)'
+set output 'qoi_comparison.eps'
+replot
+
+
+set terminal postscript eps enhanced color 
+set dgrid3d 30,30
+set xlabel '# of Ratings'
+set ylabel '# +ve Ratings' 
+set zlabel 'QOI'
+set ytics font "Times-Roman,20" 
+set xtics font "Times-Roman,20"
+set ztics font "Times-Roman,20"
+set xlabel font "Times-Roman,20"
+set ylabel font "Times-Roman,20" offset 3
+set zlabel font "Times-Roman,20"
+set key off
+splot 'Our_score_80_15.txt' using 6:7:3 with points palette pointsize 3 pointtype 7
+set output 'Josang_qoi_plot.eps'
+replot
+
+
+
+set terminal postscript eps enhanced color 
+set dgrid3d 30,30
+set xlabel '# of Ratings'
+set ylabel '# +ve Ratings' 
+set zlabel 'QOI'
+set ytics font "Times-Roman,20" 
+set xtics font "Times-Roman,20"
+set ztics font "Times-Roman,20"
+set xlabel font "Times-Roman,20"
+set ylabel font "Times-Roman,20" offset 3
+set zlabel font "Times-Roman,20"
+set key off
+splot 'Our_score_80_15.txt' using 6:7:4 with points palette pointsize 3 pointtype 7
+set output 'Our_qoi_plot.eps'
+replot

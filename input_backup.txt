@@ -1,0 +1,61 @@
+###########################   1200    ################################
+
+# 1200 - 0.30
+# 2400 - 0.15
+# 3600 - 0.1
+
+#+ve = 0.50, 0.45 - 1200 (high)
+#+ve = 0.70, 0.25 - 2400(Medium)
+#+ve = 0.80, 0.15 - 3600 (low)
+
+noOfUsers = 1200
+noOfReporters = 400
+noOfRaters = 800
+percOfMalReporters = 0.30
+positiveRatingsPercForTrueEvent = 0.45
+negativeRatingsPercForTrueEvent = 0.50
+positiveRatingsPercForFalseEvent = 0.45
+negativeRatingsPercForFalseEvent = 0.50
+
+
+
+##########################  1500 #####################################
+
+
+
+
+noOfUsers = 1500
+noOfReporters = 500
+noOfRaters = 1000
+percOfMalReporters = 0.24
+positiveRatingsPercForTrueEvent = 0.55
+negativeRatingsPercForTrueEvent = 0.40
+positiveRatingsPercForFalseEvent = 0.40
+negativeRatingsPercForFalseEvent = 0.55
+
+
+
+#########################   2400    ###################################
+
+noOfUsers = 2400
+noOfReporters = 800
+noOfRaters = 1600
+percOfMalReporters = 0.15
+positiveRatingsPercForTrueEvent = 0.70
+negativeRatingsPercForTrueEvent = 0.25
+positiveRatingsPercForFalseEvent = 0.25
+negativeRatingsPercForFalseEvent = 0.70
+
+#########################   3600    ###################################
+
+noOfUsers = 3600
+noOfReporters = 1200
+noOfRaters = 2400
+percOfMalReporters = 0.1
+positiveRatingsPercForTrueEvent = 0.78
+negativeRatingsPercForTrueEvent = 0.17
+positiveRatingsPercForFalseEvent = 0.17
+negativeRatingsPercForFalseEvent = 0.78
+
+
+#https://www.youporn.com/watch/13941277/sister-fucks-and-sucks-step-brother-after-confessing-secret-love/

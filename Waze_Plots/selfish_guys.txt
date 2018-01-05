@@ -1,0 +1,9 @@
+SelfishReporter: 17 -0.3685  14  7 7
+SelfishReporter: 18 0.268455  7  4 3
+SelfishReporter: 20 0.297169  14  8 6
+SelfishReporter: 21 -0.3583  10  4 6
+SelfishReporter: 23 -0.307811  9  4 5
+SelfishReporter: 119 -0.245965  2  1 1
+SelfishReporter: 121 0.267217  7  4 3
+SelfishReporter: 122 -0.278882  12  6 6
+SelfishReporter: 173 -0.250568  4  2 2

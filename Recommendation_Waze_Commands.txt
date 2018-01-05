@@ -1,0 +1,37 @@
+set terminal postscript eps enhanced "NimbusSanL-Regu" fontfile "/Library/Fonts/uhvr8a.pfb" 26
+#set datafile separator ","
+set style line 2 lc rgb "red" lt 4 lw 2 ps 2
+set style line 3 lc rgb "green" lt 8 lw 2 ps 2
+set style line 4 lc rgb "green" lt 2 lw 2 ps 2
+set style line 5 lc rgb "black" lt 5 lw 2 ps 2
+set style line 6 lc rgb "blue" lt 6 lw 2 ps 2
+
+set ylabel 'w_b'
+set xlabel '# of Ratings'
+#set ytics 0,0.1,1
+set xrange[0:200]
+#set ytics font "Helvetica,30" 
+#set xtics font "Helvetica,30"
+#set xlabel font "Helvetica,35"
+#set ylabel font "Helvetica,35" 
+#set key font "Helvetica, 30"
+#set bmargin 12
+set key bottom right
+#set xtics offset 0, -0.5
+#set xlabel offset 0,-3
+#set ylabel offset -4 ,0 
+#set lmargin at screen 0.12
+plot 'inverseV_2_0.02.txt' u 1:2 w lp ls 2 t'V = 0.5', 'inverseV_4_0.08.txt' u 1:2 w lp ls 4 t'V = 0.25', 'inverseV_16_0.08.txt' u 1:2 w lp ls 5 t'V = 0.0625'
+
+set output "belief_inverseV.eps"
+replot
+
+set terminal postscript eps enhanced "NimbusSanL-Regu" fontfile "uhvr8a.pfb" 26
+
+set ylabel 'w_b'
+set xlabel '# of Ratings'
+plot 'inverseV_2_0.02.txt' u 1:2 w lp t'V = 0.5', 'inverseV_4_0.08.txt' u 1:2 w lp t'V = 0.25', 'inverseV_16_0.08.txt' u 1:2 w lp t'V = 0.0625'
+
+set output "belief_inverseV.eps"
+replot
+

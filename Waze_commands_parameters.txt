@@ -1,0 +1,365 @@
+set terminal postscript eps enhanced color 
+#set datafile separator ","
+set style line 2 lc rgb "red" lt 4 lw 2 ps 2
+set style line 3 lc rgb "green" lt 8 lw 2 ps 2
+set style line 4 lc rgb "green" lt 2 lw 2 ps 2
+set style line 5 lc rgb "black" lt 5 lw 2 ps 2
+set style line 6 lc rgb "blue" lt 6 lw 2 ps 2
+
+set ylabel 'w_b'
+set xlabel '# of Ratings'
+#set ytics 0,0.1,1
+set xrange[0:200]
+set ytics font "Helvetica,30" 
+set xtics font "Helvetica,30"
+set xlabel font "Helvetica,35"
+set ylabel font "Helvetica,35" 
+set key font "Helvetica, 30"
+set bmargin 8
+set key bottom right
+set xtics offset 0, -0.5
+set xlabel offset 0,-3
+set ylabel offset -4 ,0 
+set lmargin at screen 0.17
+plot 'inverseV_2_0.02.txt' u 1:2 w lp ls 2 t'V = 0.5', 'inverseV_4_0.08.txt' u 1:2 w lp ls 4 t'V = 0.25', 'inverseV_16_0.08.txt' u 1:2 w lp ls 5 t'V = 0.0625'
+
+set output "belief_inverseV.eps"
+replot
+
+
+
+
+========== thresholdN ===============
+set terminal postscript eps enhanced color 
+#set datafile separator ","
+set style line 7 lc rgb "blue" lt 6 lw 1 ps 0.5
+set style line 1 lc rgb "red" lt 4 lw 2 ps 1
+set style line 2 lc rgb "green" lt 8 lw 2 ps 1
+set style line 3 lc rgb "black" lt 6 lw 2 ps 1
+set style line 4 lc rgb "red" lt 4 lw 2 ps 2
+set style line 5 lc rgb "green" lt 8 lw 2 ps 2
+set style line 6 lc rgb "black" lt 6 lw 2 ps 2
+
+set ylabel 'Uncertainty Weight (w_{ra})'
+set xlabel '# of Ratings'
+set yrange [0:0.6]
+set xrange [0:250]
+set ytics font "Helvetica,30" 
+set xtics font "Helvetica,30"
+set xlabel font "Helvetica,40"
+set ylabel font "Helvetica,35" 
+set key font "Helvetica, 30"
+set key center right
+set bmargin 8
+set xtics offset -1, -0.5
+set xlabel offset 0,-3
+set ylabel offset -4 ,0 
+set lmargin at screen 0.17
+#set label "w_{u}^{max}" at 150, 0.52 font "Helvetica,35"
+y = 0.5
+plot 1/0 w lp ls 4 t'N_{thres} = 25', 'threshold_25.txt' u 1:2 w lp ls 1 notitle, 1/0 w lp ls 5 t'N_{thres} = 50', 'threshold_50.txt' u 1:2 w lp ls 2 notitle, 1/0 w lp ls 6 t'N_{thres} = 100', 'threshold_100.txt' u 1:2 w lp ls 3 notitle 
+#, y w lp ls 7 notitle
+set output "uncertain_thresholdN_1.eps"
+replot
+
+============ Log Function ===========================
+
+set terminal postscript eps enhanced color
+set style line 1 lc rgb "black" lt 4 lw 2 ps 1
+set style line 2 lc rgb "red" lt 7 lw 2 ps 1
+set ylabel 'QoI' rotate by 90
+set xlabel 'Expected Truthfulness'
+set xzeroaxis ls 1
+set xtics font "Helvetica,35" 
+set ytics font "Helvetica,35" 
+set xlabel font "Helvetica,25"
+set ylabel font "Helvetica, 35" 
+set key font"Helvetica , 35"
+set key off
+set yrange[-4:4]
+set ylabel offset -3,0
+set xlabel offset 0,-2
+set xtics offset -1, -0.5
+set lmargin at screen 0.12
+set bmargin 6
+
+plot 'log.txt' u 1:2 w lp ls 1 
+set output "log_full.eps"
+replot
+
+============ Kohlrausch =============================
+
+set terminal postscript eps enhanced color
+set style line 1 lc rgb "black" lt 4 lw 2 ps 1
+set style line 2 lc rgb "red" lt 7 lw 2 ps 2
+set ylabel 'W_{ra}' rotate by 90
+set xlabel 'N'
+set xtics font "Helvetica,35" 
+set ytics font "Helvetica,35" 
+set xlabel font "Helvetica,35"
+set ylabel font "Helvetica,40" 
+set key font"Helvetica,35"
+set key off
+set xrange[0:120]
+set ylabel offset -5.5,0
+set xlabel offset 0,-3
+set xtics offset -1, -0.5
+set bmargin 8
+set lmargin at screen 0.20
+ set label "N_{thres}" at 45, 0.03  font "Helvetica,25"
+set arrow from 50, graph 0 to 50, graph 1 nohead ls 2
+plot 'kohlrausch.txt' u 1:2 w lp ls 1 
+set output "kohlrausch_thres_new.eps"
+replot
+
+
+=========== Logistic =================================
+
+set terminal postscript eps enhanced color
+set style line 1 lc rgb "black" lt 4 lw 2 ps 1
+set style line 2 lc rgb "red" lt 7 lw 2 ps 1
+set ylabel 'W_{b}' rotate by 90
+set xlabel 'N'
+set xtics font "Helvetica,35" 
+set ytics font "Helvetica,30" 
+set xlabel font "Helvetica,35"
+set ylabel font "Helvetica,40" 
+set key font"Helvetica ,35"
+#set key center
+set key off
+set yrange [0:1.1]
+set xrange[0:160]
+set ylabel offset -4,0
+set xlabel offset 0,-2
+set xtics offset -1, -0.5
+set bmargin 6
+set lmargin at screen 0.16
+set label "Lag phase" at 10, 0.1 font "Helvetica,25"
+set label "Exponential phase" at 80, 0.5  font "Helvetica,25"
+set label "Stationary phase" at 100, 1.05  font "Helvetica,25"
+
+plot 'logistic_60.txt' u 1:2 w lp ls 1
+set output "logistic_60_new.eps"
+replot
+
+
+=================== W_ra Behaviour =======================
+set terminal postscript eps enhanced color
+set style line 1 lc rgb "black" lt 4 lw 2 ps 1
+set style line 2 lc rgb "red" lt 7 lw 2 ps 1
+set ylabel 'Uncertainty Weight (W_{ra})'
+set xlabel 'No. of Ratings'
+set xtics font "Times-Roman,35" 
+set ytics font "Times-Roman,35" 
+set xlabel font "Times-Roman,35"
+set ylabel font "Times-Roman,35" 
+#set key font"Times-Roman,35"
+#set key center
+set xrange[0:200]
+set key off
+set ylabel offset -1,0
+set xlabel offset 0,-1
+set bmargin 5
+plot 'function.txt' u 1:2 w lp ls 1 t'w_{ra}'
+set output "w_ra.eps"
+replot
+
+
+================= W_b Behaviour =====================
+
+set terminal postscript eps enhanced color
+set style line 1 lc rgb "black" lt 4 lw 2 ps 1
+set style line 2 lc rgb "red" lt 7 lw 2 ps 1
+set ylabel 'Belief Weight (W_b)'
+set xlabel 'No. of Ratings'
+set xtics font "Times-Roman,35" 
+set ytics font "Times-Roman,35" 
+set xlabel font "Times-Roman,35"
+set ylabel font "Times-Roman,35" 
+#set key font"Times-Roman,35"
+#set key center
+set key off
+set xrange[0:200]
+set ylabel offset -2,0
+set xlabel offset 0,-1
+set bmargin 5
+plot 'function.txt' u 1:3 w lp ls 1 
+set output "w_b.eps"
+replot
+
+--------------------------Plot : No of Ratings vs Weight for Belief (W(b)) -----------------------------------------------
+
+set terminal postscript eps enhanced color 
+set datafile separator ","
+set style line 1 lc rgb "blue" lt 6 lw 2 ps 2
+set style line 2 lc rgb "red" lt 4 lw 2 ps 2
+set ylabel 'Belief Weight W(b)'
+set xlabel '# of ratings'
+set ytics 0,0.1,1
+set ytics font "Times-Roman,20" 
+set xtics font "Times-Roman,20"
+set xlabel font "Times-Roman,20"
+set ylabel font "Times-Roman,20" 
+set key font "Times-Roman, 24"
+set key spacing 1
+set bmargin 1
+set key center right
+plot 'Our_QOI.csv' using 5:9 w p ls 1 t'W(b)', 'Our_QOI.csv' u 5:10 w p ls 2 t'Wr(a)'
+set output 'belief_uncertainty_weight.eps'
+replot
+
+============== W_b vs A_b ====================
+
+set terminal postscript eps enhanced color 
+#set datafile separator ","
+set style line 1 lc rgb "red" lt 4 lw 2 ps 1
+set style line 2 lc rgb "green" lt 8 lw 2 ps 1
+set style line 3 lc rgb "black" lt 6 lw 2 ps 1
+set style line 4 lc rgb "red" lt 4 lw 2 ps 2
+set style line 5 lc rgb "green" lt 8 lw 2 ps 2
+set style line 6 lc rgb "black" lt 6 lw 2 ps 2
+
+set ylabel 'Belief Weight (w_b)'
+set xlabel '# of Ratings'
+set ytics 0,0.1,1
+set xrange [0:150]
+set ytics font "Helvetica,30" 
+set xtics font "Helvetica,30"
+set xlabel font "Helvetica,40"
+set ylabel font "Helvetica,40" 
+set key font "Helvetica, 35"
+set bmargin 8
+set xlabel offset 0,-3
+set ylabel offset -4 ,0 
+set lmargin at screen 0.17
+set key spacing 1
+set key center right
+set xtics offset 0, -0.5
+plot 1/0 w lp ls 4 t'A_b = 5', 'belief_a_5.txt' using 1:2 w lp ls 1 notitle, 1/0 w lp ls 5 t'A_b = 20', 'belief_a_20.txt' using 1:2 w lp ls 2 notitle, 1/0 w lp ls 6 t'A_b = 100','belief_a_100.txt' using 1:2 w lp ls 3 notitle
+set output 'belief_Ab_new.eps'
+replot
+
+
+=========== W_b vs B_b ==========================
+
+set terminal postscript eps enhanced color 
+set datafile separator ","
+set style line 1 lc rgb "red" lt 4 lw 2 ps 1
+set style line 2 lc rgb "green" lt 8 lw 2 ps 1
+set style line 3 lc rgb "black" lt 6 lw 2 ps 1
+set style line 4 lc rgb "red" lt 4 lw 2 ps 2
+set style line 5 lc rgb "green" lt 8 lw 2 ps 2
+set style line 6 lc rgb "black" lt 6 lw 2 ps 2
+set ylabel 'Belief Weight (w_b)'
+set xlabel '# of Ratings'
+#set ytics 0,0.1,1
+set xrange [0:150]
+set ytics font "Helvetica,30" 
+set xtics font "Helvetica,30"
+set xlabel font "Helvetica,40"
+set ylabel font "Helvetica,40" 
+set key font "Helvetica, 35"
+set bmargin 8
+set xlabel offset 0,-3
+set ylabel offset -4 ,0 
+set lmargin at screen 0.17
+set key spacing 1
+set key bottom right
+set xtics offset 0, -0.5
+plot 1/0 w lp ls 4 t'B_b = 0.04', 'belief_b_0.04.csv' u 1:2 w lp ls 1 notitle, 1/0 w lp ls 5 t'B_b = 0.08', 'belief_b_0.08.csv' u 1:2 w lp ls 2 notitle, 1/0 w lp ls 6 t'B_b = 0.24', 'belief_b_0.24.csv' u 1:2 w lp ls 3 notitle
+set output 'belief_b_new.eps'
+replot
+
+
+set terminal postscript eps enhanced color 
+set datafile separator ","
+set style line 1 lc rgb "blue" lt 6 lw 2 ps 1
+set style line 2 lc rgb "red" lt 4 lw 2 ps 1
+set style line 3 lc rgb "yellow" lt 8 lw 2 ps 1
+set style line 4 lc rgb "green" lt 2 lw 2 ps 1
+set style line 5 lc rgb "black" lt 5 lw 2 ps 1
+set style line 6 lc rgb "blue" lt 6 lw 2 ps 1
+
+set ylabel 'Uncertainty Weight (w_{ra})'
+set xlabel '# of Ratings'
+set ytics 0,0.1,1
+set xrange [0:150]
+set ytics font "Helvetica,30" 
+set xtics font "Helvetica,30"
+set xlabel font "Helvetica,35"
+set ylabel font "Helvetica,35" 
+set key font "Helvetica, 30"
+set bmargin 5
+set xlabel offset 0,-1
+set ylabel offset -1.5 ,0 
+set lmargin at screen 0.14
+set key spacing 1
+set xtics offset 0, -0.5
+set key at 160, 0.35
+plot 'uncertainty_a_1.csv' using 1:2 w lp ls 2 t'A_u =1', 'uncertainty_a_5.csv' using 1:2 w lp ls 3 t'A_u =5',  'uncertainty_a_20.csv' using 1:2 w lp ls 4 t'A_u =20', 'uncertainty_a_100.csv' using 1:2 w lp ls 5 t'A_u =100', 'uncertainty_a_500.csv' using 1:2 w lp ls 6 t'A_u =500'
+set output 'uncertainty_a.eps'
+replot
+
+set terminal postscript eps enhanced color 
+#set datafile separator ","
+set style line 1 lc rgb "red" lt 4 lw 2 ps 1
+set style line 2 lc rgb "green" lt 8 lw 2 ps 1
+set style line 3 lc rgb "black" lt 6 lw 2 ps 1
+set style line 4 lc rgb "red" lt 4 lw 2 ps 2
+set style line 5 lc rgb "green" lt 8 lw 2 ps 2
+set style line 6 lc rgb "black" lt 6 lw 2 ps 2
+
+set ylabel 'Uncertainty Weight (w_{ra})'
+set xlabel '# of Ratings'
+set ytics 0,0.1,1
+#set yrange[0:0.40]
+set xrange[0:150]
+set ytics font "Helvetica,30" 
+set xtics font "Helvetica,30"
+set xlabel font "Helvetica,40"
+set ylabel font "Helvetica,35" 
+set key font "Helvetica, 30"
+set bmargin 8
+set xtics offset 0, -0.5
+set xlabel offset 0,-3
+set ylabel offset -4 ,0 
+set lmargin at screen 0.17
+#set key at 160, 0.35
+set key at 150,0.38
+#set key outside
+#set key horizontal center top maxrows 4
+plot 1/0 w lp ls 4 t'B_u = 0.06', 'uncertainty_b_0.06.txt' u 1:2 w lp ls 1 notitle, 1/0 w lp ls 5 t'B_u = 0.08','uncertainty_b_0.08.txt' u 1:2 w lp ls 2 notitle, 1/0 w lp ls 6 t'B_u = 0.24', 'uncertainty_b_0.24.txt' u 1:2 w lp ls 3 notitle
+
+set output 'uncertainty_b_50_new.eps'
+replot
+
+
+set terminal postscript eps enhanced color 
+set datafile separator ","
+
+set style line 1 lc rgb "red" lt 4 lw 2 ps 1
+set style line 2 lc rgb "green" lt 8 lw 2 ps 1
+set style line 3 lc rgb "black" lt 6 lw 2 ps 1
+set style line 4 lc rgb "red" lt 4 lw 2 ps 2
+set style line 5 lc rgb "green" lt 8 lw 2 ps 2
+set style line 6 lc rgb "black" lt 6 lw 2 ps 2
+set ylabel 'Uncertainty Weight (w_{ra})'
+set xlabel '# of Ratings'
+#set ytics 0,0.1,1
+#set yrange[0:0.40]
+set xrange[0:120]
+set ytics font "Helvetica,35" 
+set xtics font "Helvetica,35"
+set xlabel font "Helvetica,40"
+set ylabel font "Helvetica,35" 
+set key font "Helvetica, 35"
+set bmargin 8
+set xtics offset -1, -1
+set xlabel offset 0,-3
+set ylabel offset -4 ,0 
+set lmargin at screen 0.17
+set key spacing 1
+set key top right
+plot 1/0 w lp ls 4 t'{/Symbol f} = 0.2', 'Our_QOI_phi_0.2.csv' u 1:2 w lp ls 1 notitle, 1/0 w lp ls 5 t'{/Symbol f} = 0.4', 'Our_QOI_phi_0.4.csv' u 1:2 w lp ls 2 notitle, 1/0 w lp ls 6 t'{/Symbol f} = 0.8', 'Our_QOI_phi_0.8.csv' u 1:2 w lp ls 3 notitle
+set output 'uncertainty_phi_new.eps'
+replot

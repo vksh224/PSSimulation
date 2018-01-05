@@ -1,0 +1,131 @@
+
+# 1 : Debug Mode
+# 2 : Debug true Event
+# 3 : Debug False Event
+# 4 : Not Debug Mode - Main output
+# 5 : Plot mode 
+# 6 : Generate files for plotting
+# 7 : Decision making
+# 8 : Published/Not Published - Old Code
+
+
+isDebugMode = 6
+sizeOfPopulation=1
+noOfEpochs = 201
+noOfPassiveUsers = 0
+percOfSelfishReporters = 0.2
+scenarioWidth = 100
+#48 - 2400
+#50 - 3600
+#45 - 1200
+eventWidth = 50
+scoreWindowSize = 100
+userMovementRange = 2
+eventRegionRadius = 50
+
+noOfUsers = 2400
+noOfReporters = 800
+noOfRaters = 1600
+percOfMalReporters = 0.15
+positiveRatingsPercForTrueEvent = 0.70
+negativeRatingsPercForTrueEvent = 0.25
+positiveRatingsPercForFalseEvent = 0.0
+negativeRatingsPercForFalseEvent = 0.70
+
+#percentage of honest reporters who report the event truly
+#trueReporterPercAfterLearning = 0.7
+
+#wrong perception
+probOfHonestReportersReportTrueEventTruly = 0.5
+probOfSelReportersReportTrueEventTruly = 0.75
+probOfMalReportersReportTrueEventTruly = 0.75
+
+#It means, whatever false event type was generated, reporters reported that exactly
+probOfHonestReportersReportFalseEventTruly = 1
+probOfSelReportersReportFalseEventTruly = 1
+probOfMalReportersReportFalseEventTruly = 1
+
+
+#probability of honest reporters to report the true event (when in range of event)
+probOfHonestReportersWhoReportTrueEvent = 0.95
+
+#probability of malicious reporters to report the true event 
+probOfMalReportersWhoReportTrueEvent = 0.05
+
+#probability of selfish reporters to report the true event
+probOfSelfishReportersWhoReportTrueEvent = 0.60
+
+#probability of selfish reporters to report the false event
+probOfSelfishReportersWhoReportFalseEvent = 0.50
+
+
+#Recently added (In IQ2S and CNS paper, there were not there)
+probOfHonestReportersWhoReportFalseEvent = 0.01
+probOfMalReportersWhoReportFalseEvent = 1
+
+
+thresholdN = 40
+
+uncertainWeightMax = 0.5
+uncertainA = 20
+uncertainB = 0.08
+
+beliefA = 20
+beliefB = 0.08
+beliefWeightMax = 1
+
+#certain percentage of reporters will rate
+simulationCase = 1
+
+# Perc. of raters in the range of event who actually report
+percOfRaters = 0.9
+
+# If the reporter has reported NoOfTrueEvent > positiveRatingRatio * NoOfFalseEvent, then he is a honest reporter
+positiveRatingRatioThres = 0.8
+
+#percentage of ratings required out of maximum ratings received by any event to be considered for comparision
+percOfTotalRatings = 0.0
+
+#QOI of event for which the system considers it as a true event
+qoiThreshold = 0
+
+# we consider only those reporters who reported more than certain number of events
+percOfEventsThreshold = 0.0
+
+phi = 0.2
+
+#prospect theory parameters for asymmetric QoI shape
+alpha = 2.5
+beta = 0.6
+lambda = 3
+referencePoint = 0.5
+reward = 1000
+
+#Decision making
+weightReport = 0.5
+weightReputation = 0.5
+
+#report confidence
+noOfReportsThresLow = 5
+noOfReportsThresHigh = 10
+reportScaleParamC = 1
+reportShapeParamB = 1
+reportVarphiParam = 0.3
+
+#reputation confidence 
+reputationScaleParamC = 1
+reputationShapeParamB = 1
+
+#Event Type History
+eventTheta = 0.88
+eventPhi = 0.88
+eventLambda = 2.25
+eventDelta = 0.61
+
+fracOfActualReportersThres = 0
+fracOfActualReportersReputationThres = 0
+
+
+
+
+
