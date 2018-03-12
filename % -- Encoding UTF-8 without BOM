@@ -1,0 +1,317 @@
+% -- Encoding UTF-8 without BOM
+% -- XeLaTeX => PDF (BIBER)
+
+\documentclass[]{cv-style}     % Add 'print' as an option into the square bracket to remove colours from this template for printing. 
+                                      % Add 'espanol' as an option into the square bracket to change the date format of the Last Updated Text
+%\setdefaultlanguage{spanish}
+%\sethyphenation[variant=spanish]{}{}  % Add words between the {} to avoid them to be cut 
+
+\usepackage{graphicx}
+
+\begin{document}
+
+\header{Vijay K. }{Shah}
+\lastupdated
+
+%----------------------------------------------------------------------------------------
+% SIDEBAR SECTION  -- In the aside, each new line forces a line break
+%----------------------------------------------------------------------------------------
+\begin{aside}
+\section{-}
+\includegraphics[width=4cm]{vj_pic2.jpg}
+%
+%\section{datos personales}
+%24 años, argentino
+%D.N.I.: 35747233
+%
+\section{Contact}
+(+1) 573-578-4238
+vijay.shah@uky.edu
+cs.uky.edu/~vksh224/
+github.com/vksh224/
+linkedin.com/in/vksh224/
+204 Marksbury Building, 329 Rose Street, Lexington, USA
+%
+\section{Research Interests}
+Wireless Networking, Opportunistic Networking, Smart Communities, Participatory Sensing, Data Analysis and Applications of Machine Learning
+%
+\section{Programming Languages}
+{\color{red} $\varheartsuit$} C/C++, Java, Python   
+%
+\section{Web Technologies}
+HTML5, CSS3, JavaScript, jQuery, AngularJS, Apache WEB Server, Bootstrap
+%
+\section{Miscellaneous}
+{\color{red} $\varheartsuit$} Mac, Ubuntu/Debian Linux, SVN/GIT Source Version Control, MySQL/PostgreSQL/Oracle DataBases, Android, Latex, Shell Script
+%
+\end{aside}
+%----------------------------------------------------------------------------------------
+% RESUMEN SECTION
+%----------------------------------------------------------------------------------------
+\iffalse
+\vspace{0.2cm}
+\section{resumen}
+  \vspace{-0.2cm}
+Soy estudiante de tercer año de la \textbf{Licenciatura en Cs. de la Computación} en la Facultad de Cs. Exactas y Naturales de la UBA. \textbf{Desarrollador de software} con un año de experiencia en Oony S.A. (Aplicación WEB de Ofertas y Cupones). \textbf{Diseñador Gráfico y WEB} con un año de experiencia en Boré Imprenta e Imagen S.A., sumados trabajos freelance en esta área. Siempre trabajé en equipo, con una relación fluida con el resto de las áreas de trabajo.
+\fi
+%----------------------------------------------------------------------------------------
+% EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+\section{Education}
+  \vspace{-0.2cm}
+\begin{entrylist}
+%------------------------------------------------
+\entry
+{\scalebox{.8}[1.0]{2015--Present}}
+{Ph.D., Computer Science {\color{blue}(May, 2009 expected)}}
+{GPA: 4.0/4.0 (until now)}
+{University of Kentucky, Lexington, USA \hspace{1.5in} {\color{lightgray} \small{2017--Present}}\\
+Missouri University of Science and Technology, Rolla, USA \hspace{0.5in} {\color{lightgray} \small{2015--2017}}\\
+\textbf{Advisors:} Simone Silvestri and Sajal K. Das 
+}
+
+%------------------------------------------------
+\entry
+{\scalebox{.8}[1.0]{2009--2013}}
+{B. Tech,, Computer Science and Engineering}
+{GPA: 8.85/10}
+{National Institute of Technology, Durgapur, India\\
+\textbf{Advisors:} Subrata Nandi (Primary) and Sujoy Saha \\
+\textbf{Thesis:} \jobtitle{Post-disaster situation analysis and resource management using peer to peer delay-tolerant wireless networks}}
+%------------------------------------------------
+\end{entrylist}
+
+%---------------------------
+% WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+\section{Professional Experience}
+  \vspace{-0.2cm}
+\begin{entrylist}
+%------------------------------------------------
+\entry
+  {\scalebox{.8}[1.0]{2017--Present}}
+  {Dr. Silvestri\'s Lab}
+  {University of Kentucky, Lexington}
+  {\jobtitle{Graduate Research Assistant} \\
+  I am currently working on following research projects: (i) Post-disaster Communications and (ii) Smart and Connected Communities. \jobtitle{See Section "Research Projects" for details}. Besides these, I am also working on a data analysis project entitled "Diagnosing Accident Severity using Pervasive Data".}
+%------------------------------------------ ------
+\entry
+  {\scalebox{.8}[1.0]{2015--2017}}
+  {Center for Research in Wireless Mobility and Networking}
+  {Missouri S\&T, Rolla}
+  {\jobtitle{Graduate Research Assistant} \\
+  Worked on following research projects: (i) Post-disaster Communications, and (ii) Trust Models in Participatory Sensing. \jobtitle{See Section "Research Projects" for details}.}
+%------------------------------------------------
+\entry
+  {\scalebox{.8}[1.0]{2015--2016}}
+  {Computer Science Department}
+  {Missouri S\&T, Rolla}
+  {\jobtitle{Graduate Teaching Assistant} 
+  \begin{itemize}
+  \item CS 1510, Data Structures, Fall 2015 and 2016
+  \item CS 1971, Introduction to C++, Spring 2015
+  \end{itemize}
+  }
+%------------------------------------------------
+\entry
+  {\scalebox{.8}[1.0]{2013--2015}}
+  {Belzabar Software Design Pvt. Ltd}
+  {New Delhi, India}
+  {\jobtitle{Computer Scientist} \\
+  Developed three android applications and a Java based web platform.\jobtitle{See Section "Industrial Projects" for details}.}
+%------------------------------------------------  
+\entry
+  {\scalebox{.8}[1.0]{Summer 2012}}
+  {Belzabar Software Design Pvt. Ltd}
+  {New Delhi, India}
+  {\jobtitle{Summer Intern} \\
+  Developed a browser plugin to detect Javacript for Opera browser and contributed to a web project with database design and backend scripts. \jobtitle{See Section "Industrial Projects" for details}.}
+
+%------------------------------------------------
+\end{entrylist}
+
+%-------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+% AWARDS SECTION
+%----------------------------------------------------------------------------------------
+\section{Awards and Scholarships}
+\vspace{-0.2cm}
+  
+\begin{entrylist}
+
+%------------------------------------------------
+\entry
+{\scalebox{.8}[1.0]{2017}}
+{Annual Commonwealth Computational Summit ($CCS^2$) Poster Competition}
+{Top $2$}
+{One of the two recipients of best poster award at Annual Commonwealth Computational Summit (CCS$^2$) organized by University of Kentucky, Lexington, USA
+}
+\end{entrylist}
+\begin{entrylist}
+%------------------------------------------------
+\entry
+{\scalebox{.8}[1.0]{2017}}
+{CS Student Research Poster ($CSSRPC$) Competition}
+{$2^{nd}$ place}
+{
+Second best poster award at Annaul CS Student Research Poster Competition organized by Missouri S\&T, Rolla (Ph.D. Category)
+}
+\end{entrylist}
+\begin{entrylist}
+%------------------------------------------------
+\entry
+{\scalebox{.8}[1.0]{2016--17}}
+{Student Travel Grant Awards}
+{}
+{ACM SenSys/BuildSys 2017, IEEE WiSec 2017, Supercomputing Conference (SC) 2017, IEEE PerCom 2016}
+%------------------------------------------------
+
+\end{entrylist}
+\begin{entrylist}
+
+\entry
+{\scalebox{.8}[1.0]{2015}}
+{Hackathon for Humanity Competition}
+{$3^{rd}$ place}
+{
+Developed Hobby.coop, a web platform for peer-to-peer tool and equipment rental. Jointly shared with Doug Mcgeehen and Bryce Mehring.
+}
+\end{entrylist}
+\begin{entrylist}
+%------------------------------------------------
+\entry
+{\scalebox{.8}[1.0]{2013}}
+{Programming Contest Competition}
+{$2^{nd}$ place}
+{
+Secured second position at the programming contest "Decathlon" in Aarohan, the National level Techno-Management Festival organized by National Institute of Technology, Durgapur, India.
+}
+\end{entrylist}
+\begin{entrylist}
+%------------------------------------------------
+\entry
+{\scalebox{.8}[1.0]{2010}}
+{Robotics Competition}
+{$2^{nd}$ place}
+{
+Secured second place at the robotics event called "RoboStunts" in the Annual Techno-Management Festival (Techniche'10) organized by Indian Institute of Technology, Guwahati, India.
+}
+\end{entrylist}
+\begin{entrylist}
+%------------------------------------------------
+\entry
+{\scalebox{.8}[1.0]{2009--2013}}
+{Direct Admission of Students Abroad (DASA) Scholarship}
+{}
+{
+Ministry of External Affairs (MEA), Government of India Sponsored Nepalese Student for admission to undergraduate engineering programs in NITs/IIITs under Direct Admission of Students Abroad (DASA) Scheme 
+}
+\end{entrylist}
+\begin{entrylist}
+%------------------------------------------------
+\entry
+{\scalebox{.8}[1.0]{2006--2007}}
+{Tuition Waiver Scholarship}
+{}
+{
+Recipient of full tuition fee waiver for obtaining the first rank in my high school (10 +2).
+}
+\end{entrylist}
+\begin{entrylist}
+%------------------------------------------------
+\entry
+{\scalebox{.8}[1.0]{2005--2006}}
+{Mahatma Gandhi Scholarship}
+{}
+{
+Mahatma Gandhi Scholarship 2005-06 of the Government of India offered by Embassy of India, Kathmandu.
+}
+\end{entrylist}
+\vspace{-0.2cm}
+  
+%----------------------------------------------------------------------------------------
+% RESEARCH PROJECTS SECTION
+%----------------------------------------------------------------------------------------3
+\section{Research Projects}
+  \vspace{-0.2cm}
+\begin{itemize}
+\item \textbf{Post-Disaster Communications:} 
+In the aftermath of disasters such as earthquake, a makeshift communication network is crucial for rescue/relief operations. However, the partial or complete damage of network infrastructures makes it difficult for responders to identify and extend rescue and relief to the survivors. Hence, we aim to design novel architectures and protocols for establishing reliable communication system between survivors and responders (until the primary infrastructures are restored). 
+%------------------------------------------------
+\item \textbf{Smart and Connected Communities:}
+Ubiquitous connectivity is essential for realizing SCCs, whether rural or urban. Such connectivity enables to gather and analyze information on multiple sensing modalities, for efficient decision making on several frontiers of human life. However, huge network infrastructures are required to form such SCCs and faces serious economic and sustainability hurdles, particularly in rural areas. Hence in this work, we aim to design low-cost and sustainable alternative option for providing connectivity to SCCs in such challenging areas. 
+%------------------------------------------------
+\item \textbf{Trust Models in Participatory Sensing:}
+Sophistication in mobile devices (e.g., smartphones) and their widespread adoption have given rise to a novel sensing paradigm, called Participatory Sensing (PS). Due to the concept of `gamification' , several selfish behaviors are possible, while the potential civilian impact of a security breach may motivate malicious intent. Wrong perception or noisy measurements further affect the reliability, dependability and trustworthiness of user's, data and services. This project aims to solve the above challenges using behavioral theoretic approaches and decision theory for achieving secure and trustworthy PS systems.
+\end{itemize}
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+% PUBLICATION SECTION
+%----------------------------------------------------------------------------------------3
+\section{Publications}
+
+\textbf{Peer-reviewed Conference Papers} 
+\begin{enumerate}
+\item \textbf{Vijay K. Shah}, Satyaki Roy, Simone Silvestri, and Sajal K. Das, "Bio-DRN: Bio-inspired Disaster Response Networks", \textbf{IEEE ICDCS 2018} (\jobtitle{Under review}). 
+%------------------------------------------------
+\item \textbf{Vijay K. Shah}, Shameek Bhattacharjee, Simone Silvestri, and Sajal K. Das, "Designing Energy-efficient Sustainable Smart Connected Communities using Dynamic Spectrum Access via Band Selection", \textbf{ACM BuildSys 2017}.
+%------------------------------------------------
+\item \textbf{Vijay K. Shah}, Satyaki Roy, Simone Silvestri, and Sajal K. Das,"CTR: A Cluster based Topological Routing for Disaster Response Network", \textbf{IEEE ICC 2017}.
+%------------------------------------------------
+\item Shameek Bhattacharjee, Nirnay Ghosh, \textbf{Vijay K. Shah}, and Sajal K. Das, "QnQ: A Reputation Model to Secure Mobile Crowdsourcing Applications from Incentive Losses", \textbf{IEEE CNS 2017}. 
+%------------------------------------------------
+\item Shameek Bhattacharjee, Nirnay Ghosh, \textbf{Vijay K. Shah}, and Sajal K. Das, "W2Q: A Dual Weighted QoI Scoring Mechanism in Social Sensing using Community Confidence", \textbf{IEEE PerCom Workshop 2017}.  
+%------------------------------------------------
+\item Satyaki Roy, \textbf{Vijay K. Shah}, and Sajal K Das, "Characterization of E. coli Gene Regulatory Network and its Topological Enhancement by Edge Rewiring", \textbf{EAI BICT 2015}. 
+%------------------------------------------------
+\item Sujoy Saha, \textbf{Vijay K. Shah}, Rohit Verma, Ratna Mandal, and Subrata Nandi, "Is It Worth Taking A Planned Approach To Design Ad Hoc Infrastructure For Post Disaster Communication?", \textbf{ACM CHANTS (MobiCom Workshop) 2012}.
+%------------------------------------------------
+\item Sushovan Patra, Sujoy Saha, \textbf{Vijay K. Shah}, Satadal Sengupta, Konsam Gojendra Singh, and Subrata Nandi, "A Qualitative Survey on Multicast Routing in Delay Tolerant Networks", \textbf{Springer WiMO 2011}.
+%------------------------------------------------
+\end{enumerate}
+
+\textbf{Peer-reviewed Journal Papers}
+
+\begin{enumerate}
+\item Shameek Bhattacharjee, Nirnay Ghosh, \textbf{Vijay K. Shah}, and Sajal K. Das, "QnQ: Quality and Quantity based Unified Approach for Secure and Trustworthy Mobile Crowdsensing", \textbf{IEEE TMC 2017} (\jobtitle{Under review}).
+
+\item Sujoy Saha, Subrata Nandi, Partha S. Paul, \textbf{Vijay K. Shah}, Akash Roy, and Sajal K. Das, "Designing delay constrained hybrid ad hoc network infrastructure for post-disaster communication", \textbf{Elsevier Ad Hoc Networks 2015}.
+
+\end{enumerate}
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+% ACADEMIC SERVICES SECTION
+%----------------------------------------------------------------------------------------3
+TPC member for ACM/IEEE IoTDI Posters/Demos, 2018
+
+Reviewed conference/journal papers for IEEE WoWMoM 2017, IEEE PerCom 2016, IEEE ICC 2017 - 18, IEEE GLOBECOM 2017, IEEE LCN 2017, IEEE SMARTCOMP 2017, IEEE MASS 2017, IEEE ICNC 2016-17, Network of Future (NoF) 2017, and Elsevier Ad-Hoc Networks 2017-2018
+
+%----------------------------------------------------------------------------------------
+
+
+%----------------------------------------------------------------------------------------
+% INDUSTRIAL PROJECTS SECTION
+%----------------------------------------------------------------------------------------3
+\section{Industrial Projects}
+  \vspace{-0.2cm}
+\begin{itemize}
+\item Developed a large-scale web application based on Java framework (can not disclose name due to NDA). \\
+Platform: Struts, JSP, Oracle, Javascript, jQuery
+
+\item Contributed to the development of the Belzabar Software Design company’s own web product (yet to launch).\\
+Platform: AngularJS, Spring, Postgresql      
+
+\item Designed and developed three released android apps ie. Startpage private Search Engine Android App https://play.google.com/store/apps/details?id=com.startpage.mobile , Ixquick private Search Engine App https://play.google.com/store/apps/details?id=com.ixquick.mobile&hl=en  and Macys Thanksgiving Parade App https://play.google.com/store/apps/details?id=com.macys.thanksgivingparade2013b \\ 
+Platform : Android, Webservices                                                                       
+ 
+\item Developed an extension entitled “Requirement Manager Track (Browser Plugin to detect Javascript)“ for Opera Browser. It helps users to run and detect javascript codes at any webpage at one’s  will.\\
+Platform: Javascript, Browser APIs                                                                
+
+\item Contributed to a project entitled “Multi-Language Browser Instruction Track (Translated-browser-instruction)” with the database design and backend scripts. \\
+Platform: MySql, Cgi-Perl        
+
+\end{itemize} 
+%----------------------------------------------------------------------------------------
+\end{document}
